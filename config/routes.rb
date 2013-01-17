@@ -1,7 +1,14 @@
 SampleApp::Application.routes.draw do
+  resources :paintings
+
+
+  resources :galleries
+
+
   resources :users
 
-  root to: 'static_pages#home'
+#  root to: 'static_pages#home'
+    root to: 'galleries#index'
 
   match '/signup',  to: 'users#new'
 
